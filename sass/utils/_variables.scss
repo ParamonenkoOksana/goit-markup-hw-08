@@ -1,0 +1,25 @@
+:root {
+  --primery-text-color: #212121;
+  --text-color-white: #ffffff;
+  --text-color-gray: #757575;
+  --secondary-text-color: rgba(255, 255, 255, 0.6);
+  --accent-color: #2196f3;
+  --primery-background-color: #ffffff;
+  --background-color-section: #2f303a;
+  --primery-background-color-btn: #f5f4fa;
+
+  --primery-icon-background: #afb1b8;
+
+  --background-color-overlay: rgba(33, 150, 243, 0.9);
+  --background-color-backdrop: rgba(0, 0, 0, 0.2);
+
+  --card-set-gap: 30px;
+}
+
+
+@mixin font($fw: 500, $fs: 14, $lh: 1.14, $ls: 0.03em) {
+  font-weight: $fw;
+  font-size: $fs + px;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
