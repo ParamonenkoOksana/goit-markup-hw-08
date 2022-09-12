@@ -1,52 +1,78 @@
 .command {
   background-color: #f5f4fa;
+  text-align: center;
+}
+@include desktop {
+  .command {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
 }
 
 .command__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  @include font($fw: 700, $fs: 36, $lh: 1.16);
-
+  @include font($fw: 700, $fs: 28, $lh: 1.18);
   text-align: center;
-
   color: var(--primery-text-color);
+}
+
+@include desktop {
+  .command__title {
+    margin-bottom: 50px;
+
+    @include font($fw: 700, $fs: 36, $lh: 1.16);
+  }
 }
 
 .command__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  align-items: center;
 }
-.command__item {
-  width: calc((100% - 90px) / 4);
 
+.command__item {
+  width: 100%;
   background: var(--primery-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
+@include tablet {
+  .command__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@include desktop {
+  .command__item {
+    width: calc((100% - 90px) / 4);
+  }
+}
 .command__wrap {
   padding-top: 30px;
-  padding-bottom: 30px;
-  /* padding-left: 5px;
-    padding-right: 5px; */
+  padding-bottom: 24px;
+}
+
+@include desktop {
+  .command__wrap {
+    padding-bottom: 30px;
+  }
 }
 
 .command__after-title {
+  margin-top: 0;
   margin-bottom: 10px;
 
   @include font($fs: 16, $lh: 1.19);
-
   text-align: center;
-
   color: var(--primery-text-color);
 }
-
 .command__text {
   margin-bottom: 16px;
   text-align: center;
-
-  @include font($fw: null, $fs: 16, $lh: 1.17);
+  @include font($lh: 1.19);
 
   color: var(--text-color-gray);
 }
@@ -55,15 +81,6 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-}
-
-.soc__link {
-  background-color: var(--primery-background-color);
-
-  &:hover,
-  &:focus {
-    background-color: var(--accent-color);
-  }
 }
 
 .soc__link {
@@ -78,6 +95,12 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--primery-background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .soc__icon {
