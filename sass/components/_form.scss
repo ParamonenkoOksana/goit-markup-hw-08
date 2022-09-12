@@ -1,5 +1,5 @@
 .input-field {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .input-title {
@@ -96,10 +96,13 @@
 
   margin-bottom: 30px;
 
-  @include font($fw: null, $lh: 1.71);
+  @include font($fw: null,$fs:12, $lh: 1.17);
 
   color: var(--text-color-gray);
 }
+@include desktop {
+.check-text {@include font($fw: null, $lh: 1.71);
+}}
 
 .check-text span {
   display: flex;
@@ -135,7 +138,7 @@
 }
 
 .input-contract {
-  display: flex;
+//   display: flex;
   margin-left: 3px;
   align-items: center;
   justify-content: center;

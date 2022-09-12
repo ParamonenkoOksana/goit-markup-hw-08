@@ -23,9 +23,6 @@
 .modal {
   position: absolute;
 
-  width: 528px;
-  height: 581px;
-
   top: 50%;
   left: 50%;
 
@@ -46,7 +43,19 @@
     min-width: 0;
   }
 }
+@include mobile {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
 
+@include desktop {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 .modal-close {
   position: absolute;
   display: flex;
@@ -81,11 +90,12 @@
   }
 }
 
-/* .no-scroll { 
+.no-scroll {
   overflow: hidden;
-}*/
+}
 
 .modal-title {
+  display: block;
   margin-bottom: 12px;
 
   @include font($fw: 700, $fs: 20, $lh: 1.15);
