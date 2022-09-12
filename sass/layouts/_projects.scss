@@ -1,6 +1,38 @@
+.projects.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@include desktop {
+  .projects.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .projects-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+  margin-bottom: 40px;
+  flex-direction: row;
+}
+
+@include tablet {
+  .projects-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    column-gap: 8px;
+
+  }
+}
+
+@include desktop {
+  .projects-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    column-gap: 8px;
+  }
 }
