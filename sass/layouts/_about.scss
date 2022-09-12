@@ -1,7 +1,12 @@
-.about.section {
-  padding-top: 0;
+@include desktop {
+  .about.section {
+    padding-top: 0;
+  }
 }
+@media screen and (max-width: 1199px)
+  {.about.section {display: none;}}
 
+.about.section 
 .about-title {
   margin-bottom: 50px;
   align-items: center;
@@ -18,12 +23,9 @@
   gap: 30px;
 }
 
-.about-wrap {
-  position: relative;
-}
-
 .about-item {
-  width: calc((100% - 60px) / 3);
+  position: relative;
+   width: calc((100% - 60px) / 3);
 }
 
 .about-text {
@@ -46,5 +48,4 @@
   color: var(--text-color-white);
   background: rgba(47, 48, 58, 0.8);
 
-  /* outline: 1px solid red; */
 }
