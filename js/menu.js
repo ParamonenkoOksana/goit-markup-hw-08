@@ -1,14 +1,17 @@
-const refs = {
-  openMenuBtn: document.querySelector("[data-menu-open]"),
-  closeMenuBtn: document.querySelector("[data-menu-close]"),
-  menu: document.querySelector("[data-menu]"),
-  body: document.querySelector("body"),
-};
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('[data-menu-open]'),
+    closeModalBtn: document.querySelector('[data-menu-close]'),
+    modal: document.querySelector('[data-menu'),
+    // body: document.querySelector('[data-modal]'),
+  };
 
-refs.openMenuBtn.addEventListener("click", toggleMenu);
-refs.closeMenuBtn.addEventListener("click", toggleMenu);
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
-function toggleMenu() {
-  refs.menu.classList.toggle("is-hidden");
-  refs.body.classList.toggle("no-scroll");
-}
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+    // refs.body.classList.toggle('no-scroll');
+
+  }
+})();
