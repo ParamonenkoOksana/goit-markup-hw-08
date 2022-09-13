@@ -34,12 +34,17 @@
           <a lang="en" href="./index.html" class="logo header__logo"
             ><span lang="en" class="current">Web</span>Studio</a
           >
+
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="./index.html" class="navigation__link link">Студия</a>
+              <a href="./index.html" class="navigation__link  link"
+                >Студия</a
+              >
             </li>
             <li class="navigation__item">
-              <a href="./portfolio.html " class="navigation__link current link">Портфолио</a>
+              <a href="./portfolio.html " class="navigation__link current link"
+                >Портфолио</a
+              >
             </li>
             <li class="navigation__item">
               <a href="./index.html" class="navigation__link link">Контакты</a>
@@ -49,7 +54,11 @@
 
         <ul class="contacs header-contacs list">
           <li class="contacs__item">
-            <a lang="en" href="mailto:info@devstudio.com" class="contacs__mail link">
+            <a
+              lang="en"
+              href="mailto:info@devstudio.com"
+              class="contacs__mail link"
+            >
               <svg class="contacs__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
@@ -65,6 +74,77 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="menu-button-open" data-menu-open>
+          <svg class="header__icon--open" width="40" height="40">
+            <use href="./images/icons.svg#icon-open-mob"></use>
+          </svg>
+        </button>
+
+        <div class="mob__menu is-hidden" data-menu>
+          <div class="mob-menu__container">
+            <div class="mob-menu-top">
+              <button type="button" class="menu-button-close" data-menu-close>
+                <svg class="menu-button__icon--close" width="40" height="40">
+                  <use href="./images/icons.svg#icon-close-mob"></use>
+                </svg>
+              </button>
+
+              <nav class="mob-menu__navigation">
+                <ul class="mob-menu__list list">
+                  <li class="mob-menu__item">
+                    <a href="./index.html" class="mob-menu__link current link"
+                      >Студия</a
+                    >
+                  </li>
+                  <li class="mob-menu__item">
+                    <a href="./portfolio.html " class="mob-menu__link link"
+                      >Портфолио</a
+                    >
+                  </li>
+                  <li class="mob-menu__item">
+                    <a href="./index.html" class="mob-menu__link link"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <ul class="mob-contacs__list list">
+              <li class="mob-contacs__item">
+                <a href="tel:+380961111111" class="mob-contacs__tel link">
+                  +38 096 111 11 11</a
+                >
+              </li>
+
+              <li class="mob-contacs__item">
+                <a
+                  lang="en"
+                  href="mailto:info@devstudio.com"
+                  class="mob-contacs__mail link"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mob-socnet__list list">
+              <li class="mob-socnet__item">
+                <a href="#" class="mob-socnet__link">Instagram</a>
+              </li>
+              <li class="mob-socnet__item">
+                <a href="#" class="mob-socnet__link">Twitter</a>
+              </li>
+              <li class="mob-socnet__item">
+                <a href="#" class="mob-socnet__link">Facebook</a>
+              </li>
+              <li class="mob-socnet__item">
+                <a href="#" class="mob-socnet__link">Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 

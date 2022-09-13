@@ -3,9 +3,18 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  
   transition-property: fill;
+  
   transition-duration: 250ms;
+  
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@include mobile {
+  .menu-button-open {margin-left: 276px;}
 }
 
 @include tablet {
@@ -14,12 +23,9 @@
   }
 }
 
-.header__icon--open {
-  width: 40px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-
+.header__icon--open 
+ { display: block;
+  
   .menu-button-open:hover &,
   .menu-button-open:focus & {
     fill: var(--accent-color);
@@ -36,6 +42,37 @@
   height: 100vh;
 }
 
+@include tablet {
+  .mob__menu {display: none;}
+}
+
+@include table {
+  .mob__menu.is-hidden {display: none;}
+}
+
+.mob__menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+@include tablet {
+  .mob__menu.is-hidden {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+}
+
+.mob__menu.is-hidden .mob__menu {
+  transform: translateX(100%);
+}
+
+@include tablet {
+  .mob__menu.is-hidden .mob__menu {
+    transform: none;
+  }
+}
+
 .menu-button-close {
   margin-left: auto;
   display: flex;
@@ -48,7 +85,7 @@
 }
 
 @include tablet {
-  .menu-button-close {display: none;}
+  .menu-button-close {display: none};
 }
 
 .menu-button__icon--close {
