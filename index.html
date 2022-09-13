@@ -34,6 +34,12 @@
           <a lang="en" href="./index.html" class="logo header__logo"
             ><span lang="en" class="current">Web</span>Studio</a
           >
+          <button type="button" class="menu-button-open" data-menu-open>
+            <svg class="header__icon--open" width="40" height="40">
+              <use href="./images/icons.svg#icon-open-mob"></use>
+            </svg>
+          </button>
+
           <ul class="navigation__list list">
             <li class="navigation__item">
               <a href="./index.html" class="navigation__link current link"
@@ -73,87 +79,70 @@
             >
           </li>
         </ul>
-      </div>
+        <div class="mob__menu is-hidden" data-menu>
+          <div class="mob-menu__container">
+            <div class="mob-menu-top">
+            <button type="button" class="menu-button-close" data-menu-close>
+              <svg class="menu-button__icon--close" width="40" height="40">
+                <use href="./images/icons.svg#icon-close-mob"></use>
+              </svg>
+            </button>
 
-      <!-- <button type="button" class="menu-button-open" data-menu-open>
-        <svg class="header__icon--open" width="40" height="40">
-          <use href="./images/icons.svg#icon-open-mob"></use>
-        </svg>
-      </button>
+            <nav class="mob-menu__navigation">
+              <ul class="mob-menu__list list">
+                <li class="mob-menu__item">
+                  <a href="./index.html" class="mob-menu__link current link"
+                    >Студия</a
+                  >
+                </li>
+                <li class="mob-menu__item">
+                  <a href="./portfolio.html " class="mob-menu__link link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mob-menu__item">
+                  <a href="./index.html" class="mob-menu__link link"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+            <div class="mob-contacs">
+              <ul class="mob-contacs__list list">
+                <li class="mob-contacs__item">
+                  <a href="tel:+380961111111" class="mob-contacs__tel link">
+                    +38 096 111 11 11</a
+                  >
+                </li>
 
-      <div class="mob-menu is-hidden" data-menu>
-        <button
-          type="button"
-          class="menu-button--close menu-button"
-          data-menu-close
-        >
-          <svg class="menu-button__icon--close" width="40" height="40">
-            <use href="./images/icons.svg#icon-close-mob"></use>
-          </svg>
-        </button>
-
-        <nav class="mob-menu__navigation">
-          <ul class="mob-menu__list list">
-            <li class="mob-menu__item">
-              <a
-                href="./index.html"
-                class="mob-menu__link navigation__link link"
-                >Студия</a
-              >
-            </li>
-            <li class="mob-menu__item">
-              <a
-                href="./portfolio.html "
-                class="mob-menu__link navigation__link link"
-                >Портфолио</a
-              >
-            </li>
-            <li class="mob-menu__item">
-              <a
-                href="./index.html"
-                class="mob-menu__link navigation__link link"
-                >Контакты</a
-              >
-            </li>
-          </ul>
-        </nav> -->
-
-        <div class="mob-contacs">
-          <ul class="mob-contacs__list list">
-            <li class="mob-contacs__item contacs__item">
-              <a
-                lang="en"
-                href="mailto:info@devstudio.com"
-                class="mob-contacs__mail contacs__mail link"
-              >
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacs__item contacs__item">
-              <a
-                href="tel:+380961111111"
-                class="mob-contacs__tel contacs__tel link"
-              >
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="mob-socnet">
-          <ul class="mob-socnet__list">
-            <li class="mob-socnet__item">
-              <a href="#" class="mob-socnet__link">Instagram</a>
-            </li>
-            <li class="mob-socnet__item">
-              <a href="#" class="mob-socnet__link">Twitter</a>
-            </li>
-            <li class="mob-socnet__item">
-              <a href="#" class="mob-socnet__link">Facebook</a>
-            </li>
-            <li class="mob-socnet__item">
-              <a href="#" class="mob-socnet__link">Linkedin</a>
-            </li>
-          </ul>
+                <li class="mob-contacs__item">
+                  <a
+                    lang="en"
+                    href="mailto:info@devstudio.com"
+                    class="mob-contacs__mail link"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+              <ul class="mob-socnet__list list">
+                <li class="mob-socnet__item">
+                  <a href="#" class="mob-socnet__link">Instagram</a>
+                </li>
+                <li class="mob-socnet__item">
+                  <a href="#" class="mob-socnet__link">Twitter</a>
+                </li>
+                <li class="mob-socnet__item">
+                  <a href="#" class="mob-socnet__link">Facebook</a>
+                </li>
+                <li class="mob-socnet__item">
+                  <a href="#" class="mob-socnet__link">Linkedin</a>
+                </li>
+              </ul>
+            
+          </div>
         </div>
       </div>
     </header>
@@ -174,7 +163,7 @@
         </div>
       </section>
 
-    <section class="feature section">
+      <section class="feature section">
         <div class="container">
           <h2 class="visually-hidden">Feature</h2>
 
@@ -238,69 +227,69 @@
         </div>
       </section>
 
-    <section class="about section">
-      <div class="container">
-        <h2 class="about-title">Чем мы занимаемся</h2>
-        <ul class="about-list list">
-          <li class="about-item">
-            <div class="about-wrap">
-              <picture>
-                <source
-                  srcset="
-                    ./images/box1-desk-1x.jpg 1x,
-                    ./images/box1-desk-2x.jpg 2x
-                  "
-                  media="(min-width:1200px)" />
-                <img
-                  class="about-img"
-                  src="./images/box1-desk-1x.jpg"
-                  alt="рабочий процесс"
-                  width="450"
-              /></picture>
-              <p class="about-text">Десктопные приложения</p>
-            </div>
-          </li>
-          <li class="about-item">
-            <div class="about-wrap">
-              <picture>
-                <source
-                  srcset="
-                    ./images/box2-desk-1x.jpg 1x,
-                    ./images/box2-desk-2x.jpg 2x
-                  "
-                  media="(min-width:1200px)" />
-                <img
-                  class="about-img"
-                  src="./images/box2-desk-1x.jpg"
-                  alt="рабочий процесс"
-                  width="450"
-              /></picture>
-              <p class="about-text">Мобильные приложения</p>
-            </div>
-          </li>
-          <li class="about-item">
-            <div class="about-wrap">
-              <picture>
-                <source
-                  srcset="
-                    ./images/box3-desk-1x.jpg 1x,
-                    ./images/box3-desk-2x.jpg 2x
-                  "
-                  media="(min-width:1200px)" />
-                <img
-                  class="about-img"
-                  src="./images/box3-desk-1x.jpg"
-                  alt="рабочий процесс"
-                  width="450"
-              /></picture>
-              <p class="about-text">Дизайнерские решения</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <section class="about section">
+        <div class="container">
+          <h2 class="about-title">Чем мы занимаемся</h2>
+          <ul class="about-list list">
+            <li class="about-item">
+              <div class="about-wrap">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/box1-desk-1x.jpg 1x,
+                      ./images/box1-desk-2x.jpg 2x
+                    "
+                    media="(min-width:1200px)" />
+                  <img
+                    class="about-img"
+                    src="./images/box1-desk-1x.jpg"
+                    alt="рабочий процесс"
+                    width="450"
+                /></picture>
+                <p class="about-text">Десктопные приложения</p>
+              </div>
+            </li>
+            <li class="about-item">
+              <div class="about-wrap">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/box2-desk-1x.jpg 1x,
+                      ./images/box2-desk-2x.jpg 2x
+                    "
+                    media="(min-width:1200px)" />
+                  <img
+                    class="about-img"
+                    src="./images/box2-desk-1x.jpg"
+                    alt="рабочий процесс"
+                    width="450"
+                /></picture>
+                <p class="about-text">Мобильные приложения</p>
+              </div>
+            </li>
+            <li class="about-item">
+              <div class="about-wrap">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/box3-desk-1x.jpg 1x,
+                      ./images/box3-desk-2x.jpg 2x
+                    "
+                    media="(min-width:1200px)" />
+                  <img
+                    class="about-img"
+                    src="./images/box3-desk-1x.jpg"
+                    alt="рабочий процесс"
+                    width="450"
+                /></picture>
+                <p class="about-text">Дизайнерские решения</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="command section">
+      <section class="command section">
         <div class="container">
           <h2 class="command__title">Наша команда</h2>
           <ul class="command__list list">
@@ -396,7 +385,7 @@
                   alt="Ольга Репина"
                   width="450"
               /></picture>
-             
+
               <div class="command__wrap">
                 <h3 class="command__after-title">Ольга Репина</h3>
                 <p lang="en" class="command__text">Frontend Developer</p>
@@ -462,7 +451,7 @@
                   alt="Николай Тарасов"
                   width="450"
               /></picture>
-             
+
               <div class="command__wrap">
                 <h3 class="command__after-title">Николай Тарасов</h3>
                 <p lang="en" class="command__text">Marketing</p>
@@ -529,7 +518,7 @@
                   alt="Михаил Ермаков"
                   width="450"
               /></picture>
-              
+
               <div class="command__wrap">
                 <h3 class="command__after-title">Михаил Ермаков</h3>
                 <p lang="en" class="command__text">UI Designer</p>
@@ -573,7 +562,7 @@
         </div>
       </section>
 
-    <section class="сlients section">
+      <section class="сlients section">
         <div class="container">
           <h2 class="сlients-title">Постоянные клиенты</h2>
           <ul class="сlients-list list">
@@ -627,12 +616,11 @@
           </ul>
         </div>
       </section>
-    </main> 
+    </main>
 
     <!--подвал-->
     <footer class="footer">
       <div class="footer-container container">
-        
         <div class="footer-box-first">
           <a lang="en" href="#" class="footer-logo"
             ><span lang="en" class="current">Web</span>Studio</a
@@ -701,8 +689,7 @@
               </a>
             </li>
           </ul>
-        
-      </div>
+        </div>
         <div class="distribution">
           <strong class="distribution-text">Подпишитесь на рассылку</strong>
           <form class="distribution-form">
@@ -805,7 +792,9 @@
         </form>
       </div>
     </div>
+
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
+    
   </body>
 </html>

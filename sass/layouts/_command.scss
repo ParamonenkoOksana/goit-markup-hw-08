@@ -2,12 +2,6 @@
   background-color: #f5f4fa;
   text-align: center;
 }
-@include desktop {
-  .command {
-    margin-top: 94px;
-    margin-bottom: 94px;
-  }
-}
 
 .command__title {
   margin-bottom: 30px;
