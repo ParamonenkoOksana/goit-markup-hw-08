@@ -1,0 +1,130 @@
+.menu-button-open {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@include tablet {
+  .menu-button-open {
+    display: none;
+  }
+}
+
+.header__icon--open {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  .menu-button-open:hover &,
+  .menu-button-open:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.mob__menu {
+  position: fixed;
+  background-color: var(--primery-background-color);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menu-button-close {
+  margin-left: auto;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button__icon--close {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  .menu-button-close:hover &,
+  .menu-button-close:focus & {
+    fill: var(--accent-color);
+  }
+}
+.mob-menu__container {
+  padding: 10px 15px 48px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px; 
+}
+
+.mob-menu__link.current, .mob-menu__link {
+  @include font($fs: 40, $lh: 1.18, $ls: 0.02);
+color: var(--primery-text-color);
+text-decoration: none;
+
+transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover, &:focus {
+  color: var(--accent-color);
+}
+}
+
+.mob-contacs {
+  margin-bottom: 64px;
+}
+
+.mob-contacs__item:not(:last-child) {
+  margin-bottom: 32px; 
+}
+
+.mob-contacs__mail {
+  @include font($fs: 24, $lh: 1.17, $ls: 0.02);
+  color: var(--text-color-gray);
+  text-decoration: none;
+  
+}
+
+.mob-contacs__tel {
+  @include font($fs: 34, $lh: 1.18, $ls: 0.02);
+  color: var(--accent-color);
+  text-decoration: none;
+ 
+}
+
+.mob-socnet__list {
+  display: flex;
+    gap: 10px;
+
+}
+.mob-socnet__item:not(:last-child){
+  padding-right: 10px;
+  border-right: 1px solid rgba(33,33,33,.2);
+}
+
+
+.mob-socnet__link {
+  display: block;
+  color: var(--accent-color);
+  @include font($fs: 18, $lh: 1.22, $ls: 0.02);
+
+}
+
+// .no-scroll {
+//   overflow: hidden;
+// }
