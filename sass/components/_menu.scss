@@ -13,9 +13,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@include mobile {
-  .menu-button-open {margin-left: 276px;}
-}
 
 @include tablet {
   .menu-button-open {
