@@ -183,12 +183,14 @@
 
 @include desktop {
   .distribution {
+    justify-content: center;
     align-items: flex-start;
     margin-left: auto;
-    margin-top: 0;
-    margin-right: 0;
+    width: 570px;
+    height: 86px;
   }
-}
+  }
+
 
 .distribution-text {
   
