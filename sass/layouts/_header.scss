@@ -1,6 +1,6 @@
 .header {
-  background-color: var(--primary-backgraund-color);
-  border-bottom: 1px solid #ececec;
+background-color: var(--primery-background-color);
+border-bottom: 1px solid #ECECEC;;
 }
 
 .header__page.container {
@@ -87,6 +87,7 @@
 /* .navigation__item:not(:last-child) {margin-right: 50px;} */
 
 .navigation__link {
+  position: relative;
   padding: 32px 2px;
   display: block;
 
@@ -108,7 +109,7 @@
 }
 
 .navigation__link.current::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;

@@ -24,7 +24,9 @@
 @include desktop {
   .footer-container {
     display: flex;
-    // align-items: baseline;
+    align-items: baseline;
+    text-align: center;
+    justify-content: space-between;
   }
 }
 
@@ -46,7 +48,7 @@
   display: inline-block;
   margin-bottom: 20px;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 
   @include font($fw: 700, $fs: 24, $lh: 1.19);
 
@@ -126,7 +128,6 @@
   color: var(--text-color-white);
 }
 
-
 .footer-soc {
   display: flex;
   justify-content: center;
@@ -166,35 +167,43 @@
   }
 }
 .distribution {
-  display: flex;
-  margin-top: 60px;
+display: flex;
+
   margin-left: auto;
   margin-right: auto;
+  justify-content: start;
   flex-direction: column;
-  text-align: center;
   align-items: center;
-  justify-content: center;
+  margin-top: 60px;
 }
-@include tablet {
-  .distribution {
-    margin-left: auto;
+
+//   display: flex;
+//   margin-top: 60px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   flex-direction: column;
+//   text-align: center;
+//   align-items: center;
+//   justify-content: center;
+// }
+ @include tablet {
+   .distribution {
+ margin-top: 0;
+    margin-left: 165px;
+    margin-right: auto;
+    align-items: center;
   }
-}
+ }
 
 @include desktop {
   .distribution {
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: auto;
+  margin-left: 70px;
+    margin-right: auto;
     width: 570px;
-    height: 86px;
-    outline: 2px solid red;
   }
-  }
-
+}
 
 .distribution-text {
-  
   margin-bottom: 20px;
 
   @include font($fw: 700);
@@ -205,10 +214,10 @@
 }
 
 .distribution-form {
-     display: flex;
-     justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-
 }
 .distribution-form::placeholder {
   @include font(null, $fs: 16, $lh: 1.25);
@@ -216,17 +225,30 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+@include desktop {
+  .distribution-form{
+ display: flex;
+}}
+
 .footer-mail-input {
   width: 100%;
   height: 50px;
+  margin-bottom: 20px;
   padding: 15px 16px;
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--background-color-section);
   color: var(--primery-background-color);
 }
+
+@include desktop {
+  .footer-mail-input {
+    width: 358px;
+  }
+}
+
+
 
 .footer-email.button {
   display: flex;
