@@ -12,18 +12,6 @@ border-bottom: 1px solid #ECECEC;;
   display: flex;
 }
 
-.navigation__list,
-.contacs {
-  display: none;
-}
-
-
-.navigation__list,
-.contacs {
-  display: flex;
-  align-items: center;
-}
-
 .header__logo {
   display: flex;
   padding-top: 16px;
@@ -77,12 +65,14 @@ border-bottom: 1px solid #ECECEC;;
   display: none;
 }
 
-@include desktop {
+@include tablet {
   .navigation__list {
-    display: flex;
-    column-gap: 50px;
-  }
-}
+  display: contents;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+}}
+
 
 /* .navigation__item:not(:last-child) {margin-right: 50px;} */
 
