@@ -3,6 +3,9 @@ padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-color-section);
 }
+@include tablet {
+  .footer {margin: 0;}
+}
 
 .footer-container {
 display: flex;
@@ -170,7 +173,7 @@ margin-bottom: 60px;
 
 
 .distribution-text {
-  margin-bottom: 20px;
+  
 
   @include font($fw: 700);
 
@@ -181,6 +184,7 @@ margin-bottom: 60px;
 
 .distribution-form {
  display: block;
+ margin-top: 20px;
 }
 .distribution-form::placeholder {
   @include font(null, $fs: 16, $lh: 1.25);
